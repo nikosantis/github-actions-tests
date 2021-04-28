@@ -1,0 +1,17 @@
+name: DEVELOP Flow
+
+on:
+  push:
+    branches:
+      - develop
+  pull_request:
+    branches: [ develop ]
+
+jobs:
+  build_upload_to_s3:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Run a one-line script
+      run: echo Hello, world!
